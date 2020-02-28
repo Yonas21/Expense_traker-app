@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 const express = require("express");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const morgan = require("morgan");
+const path = require('path');
+
 
 // import the instance of database connection
 const connectDB = require('../config/db');
@@ -21,6 +24,11 @@ const transactionRouter = require('./routes/transaction');
 app.use(morgan('dev'));
 app.use(express.json()); // allows to use body-parser
 app.use('/api/transactions', transactionRouter);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('build'));
+  app.get('*', (req, res) => res.sendFile(__dirname, 'build','index.html'));
+}
 
 const PORT = process.env.PORT || 4000;
 
