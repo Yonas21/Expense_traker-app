@@ -18,6 +18,7 @@ connectDB();
 const transactionRouter = require('./routes/transaction');
 
 // use middleware
+app.use(morgan('dev'));
 app.use(express.json()); // allows to use body-parser
 app.use('/api/transactions', transactionRouter);
 
