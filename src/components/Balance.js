@@ -2,6 +2,7 @@
 import { GlobalContext } from "../context/GlobalState";
 import React, { useContext } from 'react';
 import { translate } from '../i18n/translate';
+import { numberWithCommas } from "../utils/format";
 
 export const Balance = () => {
 
@@ -13,7 +14,7 @@ export const Balance = () => {
     return (
       <div className = "show_remaining_balance">
         <h4>{translate("total_balance")}</h4>
-        <h1 id="balance">${total}</h1>
+        <h1 id="balance">${numberWithCommas(total)}</h1>
       </div>
     );
 }

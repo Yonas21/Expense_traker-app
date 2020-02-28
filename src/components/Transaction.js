@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import '../App.css'
+import { numberWithCommas } from "../utils/format";
+
 
 export const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
@@ -22,7 +24,7 @@ export const Transaction = ({ transaction }) => {
       </button>
       <span id="items">{transaction.item} </span>
       <span id="price">
-        {sign}${Math.abs(transaction.amount)}
+        {sign}${numberWithCommas(Math.abs(transaction.amount))}
       </span>{" "}
     </li>
   );

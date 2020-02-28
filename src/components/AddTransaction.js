@@ -34,7 +34,7 @@ export const AddTransaction = () => {
             value={item}
             onChange={event => setItem(event.target.value)}
             className="form-control"
-            placeholder={translate("add_an_item")}
+            placeholder='Enter an Item'
           />
         </div>
         <div className="form-group">
@@ -44,7 +44,7 @@ export const AddTransaction = () => {
             value={amount}
             onChange={event => setAmount(event.target.value)}
             className="form-control"
-            placeholder={translate("amount")}
+            placeholder='Enter Amount'
           />
         </div>
         <button type="submit" className="btn btn-success">
