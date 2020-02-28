@@ -12,11 +12,11 @@ export default {
     salary: "ደመወዝ",
     book: "መጽሃፍ",
     camera: "ካሜራ",
-    freelance: "የ ግል ስራ",
+    freelance: "የግል ስራ",
     new_transaction: "አዲስ ዝርዝር ጨምር",
-    item_name: "የ እቃ አይነት",
+    item_name: "የእቃ አይነት",
     amount: "ብዛት",
-    add_an_item: "የ እቃውን አይነት አስገባ",
+    add_an_item: "የእቃውን አይነት አስገባ",
     add_transaction: "ጨምር"
   }
 };

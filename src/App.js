@@ -9,7 +9,7 @@ import { AddTransaction } from "./components/AddTransaction";
 //import provider
 import { GlobalProvider } from "./context/GlobalState";
 import { I18nProvider, LOCALES } from "./i18n";
-import { translate } from "./i18n/translate";
+// import { translate } from "./i18n/translate";
 // import { FormattedMessage } from "react-intl";
 const onSelect = (value) => {
   if (value === "Amharic") {
@@ -21,7 +21,7 @@ const onSelect = (value) => {
 function App() {
   const [locale, setlocale] = useState(LOCALES.ENGLISH);
   return (
-    <div className="container">
+    <div className="container main_page">
       <I18nProvider locale={locale}>
         <GlobalProvider>
           <div className="translation">

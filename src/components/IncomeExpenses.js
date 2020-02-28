@@ -9,8 +9,8 @@ export const IncomeExpenses = () => {
   const income = amounts.filter(item => item > 0).reduce((acc, item ) => (acc+=item), 0).toFixed(2);
   const expense = (amounts.filter(item => item < 0).reduce((acc, item ) => (acc+=item), 0) * -1).toFixed(2);
   return (
-    <div className="inc_exp_container">
-      <div>
+    <div className="inc_exp_container shadow-sm p-3 mb-5 bg-light rounded">
+      <div className="left">
         <h4>{translate("income")}</h4>
         <p id="money_plus" className="plus">
           {income}

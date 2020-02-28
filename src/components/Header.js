@@ -7,7 +7,7 @@ import { translate } from "../i18n/translate";
 import '../App.css'
 export function Header() {
     return (
-      <div className="header">
+      <div id="main_header">
         {/* <h2>
           <FormattedMessage id="expense_tracker" />
         </h2> */}

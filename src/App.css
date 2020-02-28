@@ -1,62 +1,73 @@
-* {
-    box-sizing: border-box;
-    margin: auto;
-    justify-items: center;
-}
-h1,h2,h3,h4 {
-    text-align: center;
+.main_page {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 .translation {
-    width: 20%;
-}
-.container {
-    width: 100%;
-    padding-top: 10%;
-    min-height: 1000px; 
-    background-color: rgb(230, 227, 223);
-}
-.inc_exp_container {
-    margin-top: 40px;
-    width: 20%;
-    background: #ffffff !important;
-    display: flex;
-    flex-direction: row;
-    box-shadow: 0px 2px 2px #ffffff;
-    text-transform: uppercase;
-    justify-content: center;
+    float: right;
 }
 
+#main_header {
+    margin-bottom: 20px;
+}
+
+.show_remaining_balance {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.inc_exp_container {
+    width: 25%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inc_exp_container .left {
+    border-right: 1px solid rgb(209, 208, 208);
+}
+
+.inc_exp_container #money_plus {
+    color: #00FF00;
+}
+
+.inc_exp_container #money_minus {
+    color: #FF0000;
+}
 #list {
-    list-style: none;
+    width: 30%;
 }
 
 #list li {
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-items: self-start;
+    padding-top: 10px;
 }
+
+.list #items {
+    margin-right: 40px;
+}
+.list #price {
+    margin-left: 40px;
+}
+
+.list .income {
+    border-right: 3px solid #00FF00;
+}
+
+.list .expense {
+    border-right: 3px solid #FF0000;
+}
+
 #list li:hover .btn_delete {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-}
-.money {
-    font-weight: bold;
-}
-
-.minus {
-    width: 25%;
-    background-color: #ffffff;
-    border-right: 3px solid #FF0000;
-    box-shadow: 0px 2px 2px #ffffff;
-    margin-top: 10px;
-}
-
-.plus {
-    margin-top: 10px;
-    width: 25%;
-    background-color: #ffffff;
-    border-right: 3px solid #00FF00;
-    box-shadow: 0px 2px 2px #ffffff;
 }
 
 .btn_delete {
@@ -68,15 +79,12 @@ h1,h2,h3,h4 {
 }
 
 form {
-    width: 50%;
-    margin-left:41%;
-    margin-top: 15px;
-    background: rgb(173, 167, 167);
-    border: 1px solid white;
+    margin-top: 3%;
+    width: 70%;
 }
 
-.btn-success {
-    text-align: center;
-    margin-left: 20px;
-    margin-bottom: 20px;
+@media(max-width:780px) {
+    .translation {
+        margin-right: 50%;
+    }
 }
